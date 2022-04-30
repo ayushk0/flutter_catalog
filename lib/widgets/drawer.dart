@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/login.dart';
+import 'package:flutter_catalog/utilities/routes.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({ Key? key }) : super(key: key);
@@ -39,6 +41,25 @@ class DrawerLinks extends StatelessWidget {
         heading,
         textScaleFactor: 1.2,
       ),
+      onTap: (){
+        switch (heading) {
+          case "Home":
+            Navigator.pushNamed(context, MyRoutes.homeRoute);
+            break;
+          case "Profile":
+            Navigator.pushNamed(context, MyRoutes.loginRoute);
+            break;
+          case "Email Me":
+            Navigator.pushNamed(context, MyRoutes.homeRoute);
+            break;
+          default:
+            Navigator.pushNamed(context, MyRoutes.homeRoute);
+            break;
+        }
+      }
     );
   }
 }
+
+// (heading=="Profile")? Navigator.pushNamed(context, MyRoutes.loginRoute)
+//       : Navigator.pushNamed(context, MyRoutes.homeRoute);

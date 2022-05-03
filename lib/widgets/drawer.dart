@@ -1,6 +1,7 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/pages/login.dart';
+
 import 'package:flutter_catalog/utilities/routes.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -10,7 +11,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: [
+        children: const[
           DrawerHeader(
             padding: EdgeInsets.zero,
             child: UserAccountsDrawerHeader(
@@ -29,7 +30,11 @@ class MyDrawer extends StatelessWidget {
 }
 
 class DrawerLinks extends StatelessWidget {
-  const DrawerLinks({ required this.icon, required this.heading });
+  const DrawerLinks({
+    Key? key,
+    required this.icon,
+    required this.heading,
+  }) : super(key: key);
 
   final Icon icon;
   final String heading;

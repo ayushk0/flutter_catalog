@@ -107,9 +107,9 @@ class _LoginPageState extends State<LoginPage> {
                     height: 50,
                     alignment: Alignment.center,
                     child: changeButton
-                      ? Icon(
-                      Icons.done,
-                      color: Colors.white,)
+                      ? CircularProgressIndicator(
+                        color: Colors.deepPurple,
+                      )
                       : Text(
                         "Login",
                         style: TextStyle(
@@ -118,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                           fontSize: 18),
                         ),
                         decoration: BoxDecoration(
-                          color: changeButton?Colors.lightGreen:Colors.deepPurple,
+                          color: changeButton?Colors.transparent:Colors.deepPurple,
                           borderRadius: BorderRadius.circular(changeButton?50:8),
                         ), 
                   ),

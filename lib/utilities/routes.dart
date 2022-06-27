@@ -1,5 +1,4 @@
-
-class MyRoutes{
-  static String homeRoute='/home';
-  static String loginRoute='/login';
+class MyRoutes {
+  static String homeRoute = '/home';
+  static String loginRoute = '/login';
 }

@@ -22,8 +22,6 @@ class Item {
     required this.image,
   });
 
-  
-
   Item copyWith({
     int? id,
     String? name,
@@ -66,7 +64,8 @@ class Item {
 
   String toJson() => json.encode(toMap());
 
-  factory Item.fromJson(String source) => Item.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory Item.fromJson(String source) =>
+      Item.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -76,24 +75,23 @@ class Item {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is Item &&
-      other.id == id &&
-      other.name == name &&
-      other.desc == desc &&
-      other.price == price &&
-      other.color == color &&
-      other.image == image;
+        other.id == id &&
+        other.name == name &&
+        other.desc == desc &&
+        other.price == price &&
+        other.color == color &&
+        other.image == image;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      name.hashCode ^
-      desc.hashCode ^
-      price.hashCode ^
-      color.hashCode ^
-      image.hashCode;
+        name.hashCode ^
+        desc.hashCode ^
+        price.hashCode ^
+        color.hashCode ^
+        image.hashCode;
   }
 }
-

@@ -5,11 +5,7 @@ import '../utilities/catalog.dart';
 class ItemWidget extends StatelessWidget {
   final Item item;
 
-  const ItemWidget({Key? key, required this.item}) 
-  : assert (item != null), 
-    super(key: key);
-
-  
+  const ItemWidget({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +17,11 @@ class ItemWidget extends StatelessWidget {
         trailing: Text(
           "\$${item.price}",
           textScaleFactor: 1.5,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.deepPurple,
             fontWeight: FontWeight.bold,
           ),
-          ),  
+        ),
       ),
     );
   }
